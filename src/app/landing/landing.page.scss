@@ -1,0 +1,13 @@
+ion-button {
+    text-transform: none;
+    height: 50px;
+    --background: white;
+    --color: #4A41F6;
+    margin-bottom: 25px;
+    font-family: 'SFProDisplay-Bold';
+}
+
+#last {
+    --color: white;
+    --background: linear-gradient(to right, #A44DFD 10%, #4A41F6 80%);
+}

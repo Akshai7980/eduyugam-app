@@ -1,0 +1,98 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>sign-up</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <div style="text-align: center;
+  margin-top: 13%;">
+        <img src="../../assets/logo/Eduyugam Logo edit.svg" alt="" style="width: 45%;">
+
+        <h3 style="font-family: 'SFProDisplay-Bold'; color: #4A41F6">Sign Up</h3>
+    </div>
+    <div style="padding: 0px 30px;">
+        <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+            <ion-item lines="none" style="--background: #EEEEEE;
+              border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Parent's Name" formControlName="parentsName" type="text" autocapitalize="true"></ion-input>
+                <ion-icon name="people-outline" slot="end"></ion-icon>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+              border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Student's Name" formControlName="studentFullName" type="text" autocapitalize="true"></ion-input>
+                <ion-icon name="book-outline" slot="end"></ion-icon>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+      border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Address" formControlName="address" type="text" autocapitalize="true"></ion-input>
+                <ion-icon name="home-outline" slot="end"></ion-icon>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Relationship to the child" formControlName="relationship" type="text" autocapitalize="true"></ion-input>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Phone Number" formControlName="contactNumber" type="number"></ion-input>
+                <ion-icon name="phone-portrait-sharp" slot="end"></ion-icon>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Email" formControlName="email" type="email" autocapitalize="true"></ion-input>
+                <ion-icon name="mail-outline" slot="end"></ion-icon>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+        border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Password" formControlName="password" type="password"></ion-input>
+                <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+                border-radius: 25px; margin-top: 25px;">
+                <ion-select placeholder="Select Class" style="width: 98%;" (ionChange)="onSelectClass($event)">
+                    <ion-select-option *ngFor="let c of classes" [value]="c"> {{ c?.className }} </ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+            border-radius: 25px; margin-top: 25px;">
+                <ion-select placeholder="Pincode" style="width: 98%;" (ionChange)="onSelectPincode($event)">
+                    <ion-select-option *ngFor="let a of areas" [value]="a"> {{ a?.pincode }} </ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+                                border-radius: 25px; margin-top: 25px;">
+                <ion-label style="color: #7d7d7d;">Add Profile Picture</ion-label>
+                <ion-input placeholder="Add Profile Picture" type="file" accept="image/*" style="opacity: 0; position: absolute;" (change)="inputChange($event, 'IMAGE')"></ion-input>
+                <img src="../../assets/icon/image (1).png" alt="" style="height: 25px;" slot="end">
+            </ion-item>
+
+            <ion-button shape="round" expand="block" type="submit">
+                <ion-label *ngIf="this.showLoader ===  false">
+                    Sign Up
+                </ion-label>
+                <ion-label *ngIf="this.showLoader ===  true">
+                    <div style="display: flex; align-items: center">
+                        <ion-spinner></ion-spinner>
+                        Please Wait ...
+                    </div>
+                </ion-label>
+            </ion-button>
+        </form>
+
+        <div style="text-align: center;">
+            <p style="color: #525252;">By signing up, you are agree with our <span>Terms & Conditions</span> </p>
+        </div>
+
+    </div>
+
+</ion-content>

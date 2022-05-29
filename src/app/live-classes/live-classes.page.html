@@ -1,0 +1,61 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/folder" icon="chevron-back"></ion-back-button>
+            </ion-buttons>
+        </ion-buttons>
+        <ion-title>Live Classes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div>
+        <div style="padding: 10px 25px 10px 25px;">
+            <img src="../../assets/image/Group 161@2x.jpg" alt="">
+        </div>
+
+        <div *ngIf="this.liveClasses?.length === 0 ">
+            <ion-card style="padding: 15px;
+            border-radius: 20px;" *ngFor="let s of skeleton;">
+                <ion-skeleton-text animated style="width: 80%;
+                height: 17px;
+                --border-radius: 10px;"></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 40%;
+                height: 17px;
+                --border-radius: 10px;"></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 50%;
+                height: 17px;
+                --border-radius: 10px;"></ion-skeleton-text>
+                <ion-skeleton-text animated style="width: 70%;
+                            height: 17px;
+                            --border-radius: 10px;"></ion-skeleton-text>
+            </ion-card>
+        </div>
+
+        <ion-card style="padding: 15px;
+            border-radius: 20px;" *ngFor="let l of liveClasses?.data?.classes;">
+            <div style="display: flex; align-items: center; justify-content: space-around;">
+                <div style="text-align: center;">
+                    <h5 style="margin: 0px;
+                    color: #C9473F;"> <strong> {{ l?.subject }} </strong> </h5>
+                    <p style="color: #4b494a;
+                    margin: 5px 0px;"> {{ l?.teacherName }} </p>
+                    <p style="color: #EE6E40; margin: 5px 0px;"> {{ l?.startTime }} </p>
+                    <ion-chip style="font-size: x-small; margin: -2px; --color: #EE6E40; --background: #ee6e4033;"> {{ l?.startTime }} - {{ l?.endTime }} </ion-chip>
+                </div>
+
+                <div>
+                    <ion-button shape="round" style="text-transform: none;
+                    height: 60px;
+                    --border-radius: 15px;
+                    --background: linear-gradient(to bottom right, #C9473F 30%, #EE6E40 90%);
+                    font-family: 'SFProDisplay-Bold';
+                    font-size: larger;" (click)="joinMeeting(l)">Join</ion-button>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+
+</ion-content>

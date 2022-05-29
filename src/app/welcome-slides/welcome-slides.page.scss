@@ -1,0 +1,17 @@
+ion-content {
+    --background: linear-gradient(to bottom, #A44DFD 10%, #4A41F6 80%);
+}
+
+h4 {
+    color: white;
+    font-family: 'SFProDisplay-Light';
+}
+
+ion-button {
+    text-transform: none;
+    height: 45px;
+    --color: white;
+    --background: linear-gradient(to left, #A44DFD 10%, #4A41F6 80%);
+    margin-top: 15px;
+    font-family: 'SFProDisplay-Bold';
+}

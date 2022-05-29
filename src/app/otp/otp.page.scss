@@ -1,0 +1,25 @@
+p {
+    font-size: medium;
+    font-family: "SFProDisplay-Regular";
+    text-align: center;
+    color: #4A41F6;
+    letter-spacing: 0.5px;
+}
+
+.otpinput {
+    background-color: #eeeeee;
+    border-radius: 7px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    --padding-end: 10px;
+}
+
+ion-button {
+    font-family: 'SFProDisplay-Bold';
+    text-transform: none;
+    height: 50px;
+    margin-top: 25px;
+    --color: white;
+    --background: linear-gradient(to right, #A44DFD 10%, #4A41F6 80%);
+}

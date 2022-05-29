@@ -1,0 +1,64 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>welcome-slides</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <div>
+        <ion-slides pager="true" style="--bullet-background: blue;
+        --bullet-background-active: white;" (ionSlideNextEnd)="slideNext($event)" (ionSlideReachEnd)="slideEnd($event)">
+            <ion-slide style="padding: 0px 0px 80px 0px;">
+                <div style="margin-top: 30%;">
+                    <img src="../../assets/image/welcm1.png" alt="" class="animate__animated animate__bounceIn animate__delay-1s">
+                    <div style="position: absolute;
+                    right: 18%;
+                    top: 24%;
+                    text-align: end;
+                    color: #4a41f6;">
+                        <h2 style="margin: 0px;" class="animate__animated animate__bounceInRight animate__delay-1s">Learn</h2>
+                        <h2 style="margin: 0px;" class="animate__animated animate__bounceInRight animate__delay-1s">from the best</h2>
+                    </div>
+                    <h4 style="padding: 0px 25px;" class="animate__animated animate__bounceInLeft animate__delay-1s">Be taught by the best teachers on the App</h4>
+                </div>
+            </ion-slide>
+
+            <ion-slide style="padding: 0px 0px 80px 0px;">
+                <div style="margin-top: 30%;">
+                    <img src="../../assets/image/welcm3.png" alt="" class="second">
+                    <div style="position: absolute;
+                    left: 10%;
+                    top: 35%;
+                    text-align: start;
+                    color: #4a41f6;">
+                        <h2 style="margin: 0px;" class="text1">Quizzes</h2>
+                        <h2 style="margin: 0px;" class="text2">and test series</h2>
+                        <h2 style="margin: 0px;" class="text3">at one place</h2>
+                    </div>
+                    <h4 style="padding: 0px 25px;" class="text4">Test your learning and get in-depth analysis</h4>
+                </div>
+            </ion-slide>
+
+            <ion-slide style="padding: 0px 0px 80px 0px;">
+                <div style="margin-top: 30%;">
+                    <img src="../../assets/image/welcm2.png" alt="" class="third">
+                    <div style="position: absolute;
+                    right: 18%;
+                    top: 26%;
+                    text-align: end;
+                    color: #4a41f6;">
+                        <h2 style="margin: 0px;" class="third1">Learn</h2>
+                        <h2 style="margin: 0px;" class="third2">Share,</h2>
+                        <h2 style="margin: 0px;" class="third3">Connect</h2>
+                    </div>
+                    <h4 style="padding: 0px 25px;" class="third4">Connect with your friends, challenge them & learn together</h4>
+                    <ion-button shape="round" routerLink="/landing" class="button">Get Started
+                        <ion-icon name="arrow-forward-circle" slot="end" style="font-size: 2rem;"></ion-icon>
+                    </ion-button>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+
+</ion-content>

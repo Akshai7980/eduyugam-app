@@ -1,0 +1,107 @@
+<ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar style="border-radius: 0px 0px 15px 15px;">
+        <div style="display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-image: linear-gradient(to right, #A44DFD 10%, #4A41F6 80%);
+         padding: 10px;">
+            <div>
+                <ion-buttons slot="start">
+                    <ion-menu-button>
+                        <img src="../../assets/image/Group.png" alt="">
+                    </ion-menu-button>
+                </ion-buttons>
+                <h4 style="margin: 0px 0px 0px 10px;
+                 color: white;">Hello,</h4>
+                <h4 style="margin: 0px 0px 0px 10px;
+                 color: white;"> {{ userDetails?.fullName }} </h4>
+            </div>
+            <div>
+                <ion-avatar>
+                    <img src="../../assets/image/user.jpeg" alt="">
+                </ion-avatar>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-searchbar style="margin-top: 15px;"></ion-searchbar>
+    <div style="text-align: center;">
+        <h5 style="color: #4A41F6; margin: 15px 0px; font-family: 'SFProDisplay-Semibold';"> Revolutionize online learning with us </h5>
+    </div>
+
+    <div style="display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-gap: 0.5rem;">
+        <div class="ion-activatable ripple-parent" style="background-image: linear-gradient(to bottom right, #A24DFD 30%, #4A41F6 90%); padding: 15px; text-align: center; border-radius: 15px; height: 110px; width: 150px; margin-bottom: 10px;" routerLink="/live-classes">
+            <img src="../../assets/icon/online-class (2).png" alt="" style="height: 45px;">
+            <p style="font-family: 'SFProDisplay-Bold';
+            color: white; margin: 0px; font-size: 15px;">Live Classes</p>
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+        </div>
+
+        <div class="ion-activatable ripple-parent" style="background-image: linear-gradient(to bottom right, #A24DFD 30%, #4A41F6 90%); padding: 15px; text-align: center; border-radius: 15px; height: 110px; width: 150px; margin-bottom: 10px;">
+            <img src="../../assets/icon/online-class.png" alt="" style="height: 45px;">
+            <p style="font-family: 'SFProDisplay-Bold';
+            color: white; margin: 0px; font-size: 15px;">Recorded Classes</p>
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+
+        </div>
+
+        <div class="ion-activatable ripple-parent" style="background-image: linear-gradient(to bottom right, #A24DFD 30%, #4A41F6 90%); padding: 15px; text-align: center; border-radius: 15px; height: 110px; width: 150px; margin-bottom: 10px;">
+            <img src="../../assets/icon/assignment.png" alt="" style="height: 45px;">
+            <p style="font-family: 'SFProDisplay-Bold';
+            color: white; margin: 0px; font-size: 15px;">Assignments</p>
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+
+        </div>
+
+        <div class="ion-activatable ripple-parent" style="background-image: linear-gradient(to bottom right, #A24DFD 30%, #4A41F6 90%); padding: 15px; text-align: center; border-radius: 15px; height: 110px; width: 150px; margin-bottom: 10px;">
+            <img src="../../assets/icon/writing.png" alt="" style="height: 45px;">
+            <p style="font-family: 'SFProDisplay-Bold';
+            color: white; margin: 0px; font-size: 15px;">Notes</p>
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+
+        </div>
+
+        <div class="ion-activatable ripple-parent" style="background-image: linear-gradient(to bottom right, #A24DFD 30%, #4A41F6 90%); padding: 15px; text-align: center; border-radius: 15px; height: 110px; width: 150px; margin-bottom: 10px;">
+            <img src="../../assets/icon/goal.png" alt="" style="height: 45px;">
+            <p style="font-family: 'SFProDisplay-Bold';
+            color: white; margin: 0px; font-size: 15px;">Parents Spaces & Progress Card</p>
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+
+        </div>
+
+        <div class="ion-activatable ripple-parent" style="background-image: linear-gradient(to bottom right, #A24DFD 30%, #4A41F6 90%); padding: 15px; text-align: center; border-radius: 15px; height: 110px; width: 150px; margin-bottom: 10px;">
+            <img src="../../assets/icon/wallet (1).png" alt="" style="height: 45px;">
+            <p style="font-family: 'SFProDisplay-Bold';
+            color: white; margin: 0px; font-size: 15px;">Payment</p>
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+
+        </div>
+
+        <div class="ion-activatable ripple-parent" style="background-image: linear-gradient(to bottom right, #A24DFD 30%, #4A41F6 90%); padding: 15px; text-align: center; border-radius: 15px; height: 110px; width: 150px; margin-bottom: 10px;">
+            <img src="../../assets/icon/graduation-cap.png" alt="" style="height: 45px;">
+            <p style="font-family: 'SFProDisplay-Bold';
+            color: white; margin: 0px; font-size: 15px;">Exams & MCQ</p>
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+
+        </div>
+
+        <div class="ion-activatable ripple-parent" style="background-image: linear-gradient(to bottom right, #A24DFD 30%, #4A41F6 90%); padding: 15px; text-align: center; border-radius: 15px; height: 110px; width: 150px; margin-bottom: 10px;">
+            <img src="../../assets/icon/question-mark.png" alt="" style="height: 45px;">
+            <p style="font-family: 'SFProDisplay-Bold';
+            color: white; margin: 0px; font-size: 15px;">Doubt Clearance</p>
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+
+        </div>
+    </div>
+
+</ion-content>
+
+<!-- <ion-footer>
+    <ion-toolbar style="height: 65px;
+        border-radius: 12px 12px 0px 0px;"></ion-toolbar>
+</ion-footer> -->

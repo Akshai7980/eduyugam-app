@@ -1,0 +1,57 @@
+<ion-content>
+
+    <div style="text-align: center;
+    margin-top: 13%;">
+        <img src="../../assets/logo/Eduyugam Logo edit.svg" alt="" style="width: 45%; margin-bottom: 7%;">
+    </div>
+    <div style="padding: 0px 30px;">
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+            <ion-item lines="none" style="--background: #EEEEEE;
+                border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Email Address" formControlName="email" autocapitalize="true"></ion-input>
+                <ion-icon name="mail-outline" slot="end" style="color: #b0b0b0;"></ion-icon>
+            </ion-item>
+
+            <ion-item lines="none" style="--background: #EEEEEE;
+                border-radius: 25px; margin-top: 25px;">
+                <ion-input placeholder="Password" type="password" formControlName="password"></ion-input>
+                <ion-icon name="lock-closed-outline" slot="end" style="color: #b0b0b0;"></ion-icon>
+            </ion-item>
+
+            <div>
+                <p style="text-align: start;
+            margin-left: 1em; color: #4A41F6;">Forgot Password?</p>
+            </div>
+
+            <ion-button shape="round" expand="block" type="submit">
+                <ion-label *ngIf="this.showLoader ===  false">
+                    Login
+                </ion-label>
+                <ion-label *ngIf="this.showLoader ===  true">
+                    <div style="display: flex; align-items: center">
+                        <ion-spinner></ion-spinner>
+                        Please Wait ...
+                    </div>
+                </ion-label>
+            </ion-button>
+        </form>
+        <div style="text-align: center;">
+            <p style="color: #525252;">Don't have an account? <span routerLink="/sign-up">Register now</span> </p>
+        </div>
+
+        <!-- <div *ngIf="this.showLoader ===  true" style="display: flex; align-items: center; margin-top: 25%; justify-content: center;">
+            <div>
+                <ion-spinner></ion-spinner>
+            </div>
+            <div>
+                <p style="color: #4A41F6;"> Please wait<strong> {{ this.loginForm.value.email }} </strong> </p>
+            </div>
+        </div> -->
+
+        <div style="text-align: center; margin-top: 50%;">
+            <p style="color: #525252;">By signing up, you are agree with our <span>Terms & Conditions</span> </p>
+        </div>
+
+    </div>
+
+</ion-content>

@@ -1,0 +1,76 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>otp</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <div style="text-align: center;
+  margin-top: 13%;">
+        <img src="../../assets/logo/Eduyugam Logo edit.svg" alt="" style="width: 45%; margin-bottom: 20%;">
+    </div>
+
+
+    <div style="padding: 0px 10px;">
+        <p>A 6 - Digit PIN has been sent to your Mobile Number<span> <strong> ( +91 {{ this.phoneNumber }} ) </strong> </span>, enter it below to continue</p>
+        <form (ngSubmit)="otpSubmit()">
+            <ion-row>
+                <ion-col>
+                    <div>
+                        <ion-input #otp1 name="1" type="tel" pattern="[0-9]{6}" minlength="1" [value]="OTP[0]" class="otpinput" (keyup)="moveFocus( $event, otp2, '' )">
+                        </ion-input>
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div>
+                        <ion-input #otp2 name="2" type="tel" pattern="[0-9]{6}" maxlength="1" [value]="OTP[1]" class="otpinput" (keyup)="moveFocus( $event, otp3, otp1 )">
+                        </ion-input>
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div>
+                        <ion-input #otp3 name="3" type="tel" pattern="[0-9]{6}" maxlength="1" [value]="OTP[2]" class="otpinput" (keyup)="moveFocus( $event, otp4, otp2 )">
+                        </ion-input>
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div>
+                        <ion-input #otp4 name="4" type="tel" pattern="[0-9]{6}" maxlength="1" [value]="OTP[3]" class="otpinput" (keyup)="moveFocus( $event, otp5, otp3 )">
+                        </ion-input>
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div>
+                        <ion-input #otp5 name="5" type="tel" pattern="[0-9]{6}" maxlength="1" [value]="OTP[4]" class="otpinput" (keyup)="moveFocus( $event, otp6, otp4 )">
+                        </ion-input>
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div>
+                        <ion-input #otp6 name="6" type="tel" pattern="[0-9]{6}" maxlength="1" [value]="OTP[5]" class="otpinput" (keyup)="moveFocus( $event, '', otp5 )">
+                        </ion-input>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+            <!-- <ng-otp-input></ng-otp-input> -->
+            <ion-row>
+                <ion-col>
+                    <ion-button shape="round" expand="block" type="submit">
+                        <ion-label *ngIf="this.showLoader ===  false">
+                            Verify
+                        </ion-label>
+                        <ion-label *ngIf="this.showLoader ===  true">
+                            <div style="display: flex; align-items: center">
+                                <ion-spinner></ion-spinner>
+                                Please Wait ...
+                            </div>
+                        </ion-label>
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </form>
+    </div>
+
+</ion-content>
